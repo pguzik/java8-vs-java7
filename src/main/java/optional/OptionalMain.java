@@ -16,11 +16,11 @@ public class OptionalMain {
 
     public String getHouseCreditSupplierNameVeryBadly(PersonWithoutOptional person) {
         if (person != null) {
-            HouseWithoutOptional car = person.getHouseWithoutOptional();
-            if (car != null) {
-                CreditSupplierWithoutOptional insurance = car.getCreditSupplierWithoutOptional();
-                if (insurance != null) {
-                    String name = insurance.getName();
+            HouseWithoutOptional house = person.getHouseWithoutOptional();
+            if (house != null) {
+                CreditSupplierWithoutOptional creditSupplier = house.getCreditSupplierWithoutOptional();
+                if (creditSupplier != null) {
+                    String name = creditSupplier.getName();
                     //Defensive One !!!
                     if (name != null) {
                         return name;
@@ -36,15 +36,15 @@ public class OptionalMain {
         if (person == null) {
             return nullObjectValue;
         }
-        HouseWithoutOptional car = person.getHouseWithoutOptional();
-        if (car == null) {
+        HouseWithoutOptional house = person.getHouseWithoutOptional();
+        if (house == null) {
             return nullObjectValue;
         }
-        CreditSupplierWithoutOptional insurance = car.getCreditSupplierWithoutOptional();
-        if (insurance == null) {
+        CreditSupplierWithoutOptional creditSupplier = house.getCreditSupplierWithoutOptional();
+        if (creditSupplier == null) {
             return nullObjectValue;
         }
-        String name = insurance.getName();
+        String name = creditSupplier.getName();
         if (name == null) {
             return nullObjectValue;
         }
